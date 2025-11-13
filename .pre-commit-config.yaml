@@ -28,5 +28,5 @@ repos:
         name: Trivy Security Scan (local)
         entry: trivy fs --quiet --exit-code 1 --severity HIGH,CRITICAL .
         language: system
-        pass_filename: false
+        pass_filenames: false
         stages: [pre-push]
