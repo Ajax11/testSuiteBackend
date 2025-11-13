@@ -26,7 +26,7 @@ repos:
     hooks:
       - id: trivy-scan
         name: Trivy Security Scan (local)
-        entry: trivy fs .
+        entry: trivy fs --quiet --exit-code 1 --severity HIGH,CRITICAL .
         language: system
         pass_filename: false
         stages: [pre-push]
